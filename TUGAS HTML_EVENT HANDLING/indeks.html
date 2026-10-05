@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8"> <!-- endcoding utf-8-->
+    <meta name="author" content="Petrus Kayan"> <!-- pembuat halamn web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tampilan agar web lebih responsif pada semua perangkat-->
+    <meta name="description" content="ini adalah halaman web tentang profil saya"> <!-- deskripsi halaman web-->
+    <link rel="Stylesheet" href="style.css">
+    <title>Halaman Profil - Petrus Kayan</title> <!-- judul dari halaman web-->
+</head>
+
+<body>
+    <header class="main-header">
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <h1>Profil</h1>
+    </header>
+
+    <nav aria-label="navigasi">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <main id="artikel-container">
+        <h1>Petrus Kayan</h1>
+        <div class="kontainer-halaman">
+            <section id="home">
+                <header>
+                    <h2>Mahasiswa Informatika</h2>
+                </header>
+                <p>Halloooo! Selamat datang di website saya</p>
+            </section>
+
+            <section id="about">
+                <h2>Biodata</h2>
+                <article class="biodata">
+                    <h3>Informasi Diri</h3>
+                    <div class="foto">
+                        <img src="https://cdn.phototourl.com/free/2026-09-22-033d0fb8-9943-41f5-a310-a111b8b17275.jpg" alt="foto diri">
+                    </div>
+                    <div class="kontainer-biodata">
+                        <table>
+                            <tr>
+                                <td class="label">Nama</td>
+                                <td style="width: 10px;">:</td>
+                                <td class="isi">Petrus Alehandro Duli Kayan</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Umur</td>
+                                <td>:</td>
+                                <td class="isi">20 Tahun</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Asal</td>
+                                <td>:</td>
+                                <td class="isi">Jayapura, Papua</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Alamat</td>
+                                <td>:</td>
+                                <td class="isi">Jln.Krodan, Maguwoharjo, Depok, Kab.Sleman</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Pekerjaan</td>
+                                <td>:</td>
+                                <td class="isi">Mahasiswa</td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+
+                <article>
+                    <h2>About me</h2>
+                    <p>Saya adalah seorang Mahasiswa yang sedang menempuh pendidikan di Universitas Sanata Dharma. Saya
+                        seorang anak laki - laki pertama atau sulung, saya gemar sekali bermain futsal ataupun bola
+                        jalanan dan juga saya sangat senang mengikuti beladiri seperti <strong>Muaythai/MMA</strong>.
+                        Saya juga gemar bermain game seperti Mobile Legends, selain itu saya juga suka mengeksplor alam
+                        seperti <strong>Gunung</strong> ataupun <strong>Pantai</strong> tetapi saya lebih senang ke
+                        pantai karena melihat laut yang begitu luas dan juga satwa laut yang begitu beragam di laut.</p>
+                </article>
+            </section>
+
+            <section id="portfolio">
+                <h2>Portofolio & Pengalaman</h2>
+                <div class="form-tambah-portfolio">
+                    <h3>Tambah Item Portofolio Baru</h3>
+                    <div class="form-group">
+                        <label for="input-judul">Judul Portofolio/Pengalaman</label>
+                        <input type="text" id="input-judul" placeholder="Contoh: Pembuatan Website dll">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-deskripsi">Deskripsi</label>
+                        <textarea id="input-deskripsi"
+                            placeholder="Jelaskan peran atau teknologi yang digunakan"></textarea>
+                    </div>
+                    <button id="btn-simpan">Simpan Portofolio</button>
+                </div>
+
+                <div id="portfolio-container"></div>
+            </section>
+        </div>
+        <aside>
+            <h2> Halaman web profil</h2>
+            <p> ini merupakan halaman website tentang profil pribadi </p>
+        </aside>
+    </main>
+    <section id="komentar">
+            <h2>Tinggalkan komentar</h2>
+            <form id="form-komentar">
+                <input type="text" id="input-nama" placeholder="Nama Anda" required>
+                <textarea id="input-pesan" placeholder="Tulis komentar..." required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <ul id="daftar-komentar"></ul>
+        </section>
+    <footer>
+        <img src="https://cdn.phototourl.com/free/2026-09-22-106074cf-9191-46b8-b782-1c6c0365b08c.jpg" alt="gambar atau logo instagram sebagai kontak">
+        <p> @sanndrooo.___</p>
+        <p>&copy; 2026 Petrus Alehandro Duli Kayan</p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
