@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8"> <!-- endcoding utf-8-->
+        <meta name="author" content="Petrus Kayan"> <!-- pembuat halamn web-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- tampilan agar web lebih responsif pada semua perangkat-->
+        <meta name="description" content="ini adalah halaman web tentang profil saya"> <!-- deskripsi halaman web-->
+        <title>Halaman Profil - Petrus Kayan</title> <!-- judul dari halaman web-->
+        
+        <style>
+            /* style untuk semua elemen */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* style untuk pada elemen body */
+            body {
+                font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                line-height: 1.6;
+                color: #334155; 
+                background-color: #f8fafc; 
+            }
+
+            /* style pada header */
+            header.main-header {
+                max-width: 1000px;
+                margin: 30px auto 0 auto;
+                background: #ffffff;
+                padding: 20px 30px;
+                border-left: 5px solid #1e40af; 
+                border-radius: 0 8px 8px 0;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            }
+            header.main-header h1 {
+                color: #0f172a;
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+            }
+
+            /* style pada navigasi */
+            .nav-body {
+                max-width: 1000px;
+                margin: 15px auto 25px auto;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+                gap: 15px;
+            }
+            nav ul li a {
+                display: inline-block;
+                color: #64748b;
+                text-decoration: none;
+                padding: 8px 20px;
+                font-weight: 500;
+                background-color: #ffffff;
+                border: 1px solid #e2e8f0;
+                border-radius: 6px;
+                transition: all 0.2s ease;
+            }
+            nav ul li a:hover {
+                color: #1e40af;
+                background-color: #eff6ff;
+                border-color: #bfdbfe;
+            }
+
+           /* style pada main */
+            main {
+                max-width: 1000px; 
+                margin: 0 auto 50px auto;
+                display: flex;
+                gap: 25px; 
+                align-items: flex-start;
+            }
+            
+            
+            main > h1 {
+                display: none; 
+            }
+
+            
+            .kontainer-halaman {
+                flex: 1; 
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            /* style pada elemen section */
+            section {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            }
+            
+            /* style pada navigasi home */
+            #home {
+                text-align: center;
+            }
+            #home header h2 {
+                color: #0f172a;
+                font-size: 1.8rem;
+                margin-bottom: 2px;
+            }
+            #home header p {
+                color: #64748b;
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            #home img {
+                width: 100%;
+                max-height: 380px;
+                object-fit: cover;
+                border-radius: 6px;
+                margin-bottom: 20px;
+            }
+            #home p {
+                font-size: 1.05rem;
+                color: #475569;
+                margin-bottom: 20px;
+            }
+
+            /* style pada navigasi about */
+            #about h2 {
+                color: #0f172a;
+                font-size: 1.5rem;
+                border-bottom: 2px solid #e2e8f0;
+                padding-bottom: 8px;
+                margin-bottom: 20px;
+            }
+            #about article {
+                margin-bottom: 30px;
+            }
+            #about article:last-of-type {
+                margin-bottom: 0;
+            }
+            
+            /* sytle pada biodata */
+            .biodata {
+                display: flex;
+                gap: 25px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .biodata > h3{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+                color: black;
+            }
+
+            .foto img {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid #e2e8f0;
+            }
+            .kontainer-biodata {
+                flex: 1;
+            }
+
+            /* merapikan tag table */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table td {
+                padding: 6px 4px;
+                vertical-align: top;
+                font-size: 0.95rem;
+            }
+            table td.label {
+                font-weight: 600;
+                color: #475569;
+                width: 90px;
+            }
+
+            /* membuat warna pada text menjadi abu"*/
+            #about article p {
+                color: #475569;
+                text-align: justify;
+                text-indent: 30px;
+                margin-top: 10px;
+            }
+            
+            /* membuat text bold berwarna biru */
+            #about article strong {
+                color: #1e40af;
+            }
+            
+            /* sytle pada aside */
+            aside{
+                background-color: black;
+                width: 280px;
+                padding: 25px;
+                border-radius: 8px;
+            }
+            aside h1{
+                font-size: 1.1rem;
+                color: white;
+                margin-bottom: 10px;
+            }
+            aside p{
+                font-size: 0.9rem;
+                color: white;
+            }
+
+            /* style pada footer */
+            footer{
+                background-color: black;
+                width: 30%;
+                text-align: center;
+                padding: 25px 0;
+                color: black;
+                font-size: 0.9rem;
+                border-top: 1px solid white;
+                margin-top: 40px;
+                border-radius: 8px;
+                max-width: 1000px;
+                margin:0 auto;
+            }
+            footer p{
+                color:white;
+            }
+            footer img{
+                width: 30%;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid white;
+            }
+
+        </style>
+    </head>
+        
+    <body> 
+        <!-- header utama -->
+        <header class="main-header">
+            <h1>Profil</h1>
+        </header>
+
+        <!-- navigasi -->
+        <div class="nav-body">
+            <nav aria-label="navigasi"> 
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- konten utama semantik -->
+        <main> 
+            <h1>Petrus Kayan</h1>
+            
+            <!-- bagian home dan about -->
+            <div class="kontainer-halaman">
+                <section id="home">
+                    <header> 
+                        <h2>Petrus Kayan</h2>
+                        <p>Mahasiswa Informatika</p>
+                    </header>
+                    <img src="galaxy-nature-aesthetic-background-starry-sky-mountain-remixed-media.jpg" alt="Banner Petrus Kayan">
+                    <p>Halloooo! Selamat datang di website saya</p>
+                </section>
+
+                <section id="about">
+                    <h2>Biodata</h2>
+                    <article class="biodata">
+                        <h3>Informasi Diri</h3>
+                        <div class="foto">
+                            <img src="https://cdn.phototourl.com/free/2026-09-22-033d0fb8-9943-41f5-a310-a111b8b17275.jpg" alt="foto diri">
+                        </div>
+                        <div class="kontainer-biodata">
+                            <table> 
+                                <tr> 
+                                    <td class="label">Nama</td>
+                                    <td style="width: 10px;">:</td>
+                                    <td class="isi">Petrus Alehandro Duli Kayan</td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Umur</td>
+                                    <td>:</td>
+                                    <td class="isi">20 Tahun</td>                  
+                                </tr>
+                                <tr>
+                                    <td class="label">Asal</td>
+                                    <td>:</td>
+                                    <td class="isi">Jayapura, Papua</td>                  
+                                </tr>
+                                <tr>
+                                    <td class="label">Alamat</td>
+                                    <td>:</td>
+                                    <td class="isi">Jln.Krodan, Maguwoharjo, Depok, Kab.Sleman</td>                  
+                                </tr>
+                                <tr>
+                                    <td class="label">Pekerjaan</td>
+                                    <td>:</td>
+                                    <td class="isi">Mahasiswa</td>                  
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
+                    <article>
+                        <h2>About me</h2>
+                        <p>Saya adalah seorang Mahasiswa yang sedang menempuh pendidikan di Universitas Sanata Dharma. Saya seorang anak laki - laki pertama atau sulung, saya gemar sekali bermain futsal ataupun bola jalanan dan juga saya sangat senang mengikuti beladiri seperti <strong>Muaythai/MMA</strong>. 
+                            Saya juga gemar bermain game seperti Mobile Legends, selain itu saya juga suka mengeksplor alam seperti <strong>Gunung</strong> ataupun <strong>Pantai</strong> tetapi saya lebih senang ke pantai karena melihat laut yang begitu luas dan juga satwa laut yang begitu beragam dan di laut juga kita bisa berenang</p>
+                    </article>
+                </section>
+            </div>
+            <aside>
+                <h2> Halaman web profil</h2>
+                <p> 
+                    ini merupakan halaman website tentang profil pribadi 
+                </p>
+            </aside>
+        </main>
+        <footer> 
+                <img src="https://cdn.phototourl.com/free/2026-09-22-106074cf-9191-46b8-b782-1c6c0365b08c.jpg" alt="gambar atau logo instagram sebagai kontak"> 
+                <p> @sanndrooo.___</p>
+                <p>&copy; 2026 Petrus Alehandro Duli Kayan</p>
+        </footer>
+    </body>
+</html>
+
+
