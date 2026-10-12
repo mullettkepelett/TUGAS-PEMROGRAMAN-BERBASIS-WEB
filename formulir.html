@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Formulir Pendaftaran">
+    <meta name="author" content="Petrus Kayan">
+    <title>Formulir - Pendaftaran</title>
+    <link rel="stylesheet" href="formulir.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="header-atas">
+            <img src="https://web.usd.ac.id/fakultas/bisnisdanekonomi/manajemen/f1l3/PROFIL/2025%20-%20LOGO%20USD%20RESMI.png"
+                width="90" height="80" alt="Logo Universitas Sanata Dharma">
+            <div class="judul-formulir">
+                <h1>FORMULIR PENDAFTARAN MAHASISWA BARU<br>UNIVERSITAS SANATA DHARMA YOGYAKARTA</h1>
+                <p>Mrican, Tromol Pos 29 Yogyakarta 55002, Telp. (0274) 513301 Fax. (0274) 562383</p>
+                <p>Homepage: http://www.usd.ac.id, E-mail: humas@usd.ac.id</p>
+            </div>
+            <div class="jalur">JALUR REGULER</div>
+        </div>
+
+        <table class="tabel-header">
+            <tr>
+                <td rowspan="2" class="label-petunjuk">Petunjuk:</td>
+                <td rowspan="2" class="isi-petunjuk">
+                    <ol>
+                        <li>Isilah data di bawah ini dengan jelas dan lengkap dengan menggunakan bolpoin.</li>
+                        <li>Berilah tanda silang (X) pada kotak di depan pilihan jawaban.</li>
+                    </ol>
+                </td>
+                <td colspan="9" class="judul-nomor">Nomor Pendaftaran (diisi oleh petugas)</td>
+            </tr>
+            <tr class="kotak-nomor">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </header>
+
+    <main>
+        <form id="formulir" novalidate>
+            <section class="bagian-data-calon">
+                <h4>A. Data Calon Mahasiswa dan Orangtua/Wali</h4>
+
+                <table class="tabel-data">
+                    <tr>
+                        <td class="nomor">1.</td>
+                        <td class="label"><label for="nama-lengkap">Nama Lengkap (sesuai dengan STTB/STK)</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="nama-lengkap" name="nama-lengkap"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor">2.</td>
+                        <td class="label">Jenis Kelamin</td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <div class="grup-pilihan kolom-2">
+                                <span><input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan"><label
+                                        for="perempuan">Perempuan</label></span>
+                                <span><input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki"><label
+                                        for="laki-laki">Laki-laki</label></span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor">3.</td>
+                        <td class="label">Status</td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <div class="grup-pilihan kolom-3">
+                                <span><input type="radio" id="belum-menikah" name="status" value="belum-menikah"><label
+                                        for="belum-menikah">Belum Menikah</label></span>
+                                <span><input type="radio" id="menikah" name="status" value="menikah"><label
+                                        for="menikah">Menikah</label></span>
+                                <span><input type="radio" id="biarawan-biarawati" name="status"
+                                        value="biarawan-biarawati"><label
+                                        for="biarawan-biarawati">Biarawan/Biarawati</label></span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor">4.</td>
+                        <td class="label">Agama</td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <div class="grup-pilihan kolom-3">
+                                <span><input type="radio" id="islam" name="agama" value="islam"><label
+                                        for="islam">Islam</label></span>
+                                <span><input type="radio" id="katolik" name="agama" value="katolik"><label
+                                        for="katolik">Katolik</label></span>
+                                <span><input type="radio" id="kristen" name="agama" value="kristen"><label
+                                        for="kristen">Kristen</label></span>
+                                <span><input type="radio" id="budha" name="agama" value="budha"><label
+                                        for="budha">Budha</label></span>
+                                <span><input type="radio" id="hindu" name="agama" value="hindu"><label
+                                        for="hindu">Hindu</label></span>
+                                <span><input type="radio" id="lain-lain" name="agama" value="lain-lain"><label
+                                        for="lain-lain">Lain-lain</label></span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor">5.</td>
+                        <td class="label">Kewarganegaraan</td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <div class="grup-pilihan kolom-2">
+                                <span><input type="radio" id="wni" name="kewarganegaraan" value="wni"><label
+                                        for="wni">WNI</label></span>
+                                <span><input type="radio" id="wna" name="kewarganegaraan" value="wna"><label
+                                        for="wna">WNA</label></span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor">6.</td>
+                        <td class="label"><label for="alamat-surat">Alamat Surat</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <input type="text" id="alamat-surat" name="alamat-surat">
+                            <small>(alamat yang mudah dijangkau oleh Pos)</small>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor" rowspan="3">7.</td>
+                        <td class="label"><label for="alamat-asal">Alamat Asal</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="alamat-asal" name="alamat-asal"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="kabupaten-kota">Kabupaten/Kota</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="kabupaten-kota" name="kabupaten-kota"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="provinsi">Propinsi</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="provinsi" name="provinsi"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor">8.</td>
+                        <td class="label"><label for="telepon-rumah">No. Telepon Rumah/HP</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <div class="baris-ganda">
+                                <input type="tel" id="telepon-rumah" name="telepon-rumah" inputmode="tel">
+                                <label for="no-hp">No. HP:</label>
+                                <input type="tel" id="no-hp" name="no-hp" inputmode="tel">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor">9.</td>
+                        <td class="label"><label for="email">Alamat E-mail</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="email" id="email" name="email"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor" rowspan="2">10.</td>
+                        <td class="label"><label for="nama-orangtua">Nama Orang Tua/Wali</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="nama-orangtua" name="nama-orangtua"></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tingkat Pendidikan</td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <div class="grup-pilihan kolom-5">
+                                <span><input type="radio" id="tidak-lulus-sd" name="pendidikan"
+                                        value="tidak-lulus-sd"><label for="tidak-lulus-sd">Tidak lulus SD</label></span>
+                                <span><input type="radio" id="sd" name="pendidikan" value="sd"><label
+                                        for="sd">SD</label></span>
+                                <span><input type="radio" id="sltp" name="pendidikan" value="sltp"><label
+                                        for="sltp">SLTP</label></span>
+                                <span><input type="radio" id="sma" name="pendidikan" value="sma"><label
+                                        for="sma">SMA</label></span>
+                                <span><input type="radio" id="diploma" name="pendidikan" value="diploma"><label
+                                        for="diploma">Diploma</label></span>
+                                <span><input type="radio" id="sarjana-muda" name="pendidikan"
+                                        value="sarjana-muda"><label for="sarjana-muda">Sarjana Muda</label></span>
+                                <span><input type="radio" id="sarjana" name="pendidikan" value="sarjana"><label
+                                        for="sarjana">Sarjana</label></span>
+                                <span><input type="radio" id="magister" name="pendidikan" value="magister"><label
+                                        for="magister">Magister</label></span>
+                                <span><input type="radio" id="doktor" name="pendidikan" value="doktor"><label
+                                        for="doktor">Doktor</label></span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="nomor" rowspan="4">11.</td>
+                        <td class="label" colspan="3">Untuk Mahasiswa Transfer</td>
+                    </tr>
+                    <tr>
+                        <td class="label sub"><label for="asal-perguruan-tinggi">a. Asal Perguruan Tinggi</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="asal-perguruan-tinggi" name="asal-perguruan-tinggi"></td>
+                    </tr>
+                    <tr>
+                        <td class="label sub"><label for="asal-program-studi">b. Asal Program Studi</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="asal-program-studi" name="asal-program-studi"></td>
+                    </tr>
+                    <tr>
+                        <td class="label sub">c. Status</td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi">
+                            <div class="grup-pilihan kolom-2 status-transfer">
+                                <span>
+                                    <input type="radio" id="terakreditasi" name="status-transfer" value="terakreditasi">
+                                    <label for="terakreditasi">Terakreditasi dengan nilai</label>
+                                    <input type="text" id="nilai-akreditasi" name="nilai-akreditasi" class="pendek"
+                                        aria-label="Nilai akreditasi" disabled>
+                                </span>
+                                <span>
+                                    <input type="radio" id="belum-terakreditasi" name="status-transfer"
+                                        value="belum-terakreditasi">
+                                    <label for="belum-terakreditasi">Belum Terakreditasi</label>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="program-studi-dipilih">
+                <h4>B. Program Studi Yang Dipilih</h4>
+
+                <table class="tabel-prodi">
+                    <thead>
+                        <tr>
+                            <th>Fakultas</th>
+                            <th>Program Studi</th>
+                            <th>Jenjang</th>
+                            <th>Pilihan I</th>
+                            <th>Pilihan II</th>
+                            <th>Pilihan III</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fakultas" rowspan="11">Keguruan dan Ilmu Pendidikan</td>
+                            <td class="prodi">Pendidikan Guru Sekolah Dasar</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="pgsd-1" name="pilihan-1" value="pgsd"
+                                    aria-label="Pilihan I Pendidikan Guru Sekolah Dasar"></td>
+                            <td><input type="radio" id="pgsd-2" name="pilihan-2" value="pgsd"
+                                    aria-label="Pilihan II Pendidikan Guru Sekolah Dasar"></td>
+                            <td><input type="radio" id="pgsd-3" name="pilihan-3" value="pgsd"
+                                    aria-label="Pilihan III Pendidikan Guru Sekolah Dasar"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Bimbingan dan Konseling</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="bk-1" name="pilihan-1" value="bk"
+                                    aria-label="Pilihan I Bimbingan dan Konseling"></td>
+                            <td><input type="radio" id="bk-2" name="pilihan-2" value="bk"
+                                    aria-label="Pilihan II Bimbingan dan Konseling"></td>
+                            <td><input type="radio" id="bk-3" name="pilihan-3" value="bk"
+                                    aria-label="Pilihan III Bimbingan dan Konseling"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Bahasa Inggris</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="inggris-1" name="pilihan-1" value="pendidikan-inggris"
+                                    aria-label="Pilihan I Pendidikan Bahasa Inggris"></td>
+                            <td><input type="radio" id="inggris-2" name="pilihan-2" value="pendidikan-inggris"
+                                    aria-label="Pilihan II Pendidikan Bahasa Inggris"></td>
+                            <td><input type="radio" id="inggris-3" name="pilihan-3" value="pendidikan-inggris"
+                                    aria-label="Pilihan III Pendidikan Bahasa Inggris"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Bahasa, Sastra Indonesia &amp; Daerah</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="sastra-1" name="pilihan-1" value="pendidikan-sastra"
+                                    aria-label="Pilihan I Pendidikan Bahasa, Sastra Indonesia dan Daerah"></td>
+                            <td><input type="radio" id="sastra-2" name="pilihan-2" value="pendidikan-sastra"
+                                    aria-label="Pilihan II Pendidikan Bahasa, Sastra Indonesia dan Daerah"></td>
+                            <td><input type="radio" id="sastra-3" name="pilihan-3" value="pendidikan-sastra"
+                                    aria-label="Pilihan III Pendidikan Bahasa, Sastra Indonesia dan Daerah"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Sejarah</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="sejarah-1" name="pilihan-1" value="pendidikan-sejarah"
+                                    aria-label="Pilihan I Pendidikan Sejarah"></td>
+                            <td><input type="radio" id="sejarah-2" name="pilihan-2" value="pendidikan-sejarah"
+                                    aria-label="Pilihan II Pendidikan Sejarah"></td>
+                            <td><input type="radio" id="sejarah-3" name="pilihan-3" value="pendidikan-sejarah"
+                                    aria-label="Pilihan III Pendidikan Sejarah"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Ekonomi</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="pend-ekonomi-1" name="pilihan-1" value="pendidikan-ekonomi"
+                                    aria-label="Pilihan I Pendidikan Ekonomi"></td>
+                            <td><input type="radio" id="pend-ekonomi-2" name="pilihan-2" value="pendidikan-ekonomi"
+                                    aria-label="Pilihan II Pendidikan Ekonomi"></td>
+                            <td><input type="radio" id="pend-ekonomi-3" name="pilihan-3" value="pendidikan-ekonomi"
+                                    aria-label="Pilihan III Pendidikan Ekonomi"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Akuntansi</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="pend-akuntansi-1" name="pilihan-1" value="pendidikan-akuntansi"
+                                    aria-label="Pilihan I Pendidikan Akuntansi"></td>
+                            <td><input type="radio" id="pend-akuntansi-2" name="pilihan-2" value="pendidikan-akuntansi"
+                                    aria-label="Pilihan II Pendidikan Akuntansi"></td>
+                            <td><input type="radio" id="pend-akuntansi-3" name="pilihan-3" value="pendidikan-akuntansi"
+                                    aria-label="Pilihan III Pendidikan Akuntansi"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Matematika</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="pend-matematika-1" name="pilihan-1"
+                                    value="pendidikan-matematika" aria-label="Pilihan I Pendidikan Matematika"></td>
+                            <td><input type="radio" id="pend-matematika-2" name="pilihan-2"
+                                    value="pendidikan-matematika" aria-label="Pilihan II Pendidikan Matematika"></td>
+                            <td><input type="radio" id="pend-matematika-3" name="pilihan-3"
+                                    value="pendidikan-matematika" aria-label="Pilihan III Pendidikan Matematika"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Fisika</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="pend-fisika-1" name="pilihan-1" value="pendidikan-fisika"
+                                    aria-label="Pilihan I Pendidikan Fisika"></td>
+                            <td><input type="radio" id="pend-fisika-2" name="pilihan-2" value="pendidikan-fisika"
+                                    aria-label="Pilihan II Pendidikan Fisika"></td>
+                            <td><input type="radio" id="pend-fisika-3" name="pilihan-3" value="pendidikan-fisika"
+                                    aria-label="Pilihan III Pendidikan Fisika"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Biologi</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="biologi-1" name="pilihan-1" value="pendidikan-biologi"
+                                    aria-label="Pilihan I Pendidikan Biologi"></td>
+                            <td><input type="radio" id="biologi-2" name="pilihan-2" value="pendidikan-biologi"
+                                    aria-label="Pilihan II Pendidikan Biologi"></td>
+                            <td><input type="radio" id="biologi-3" name="pilihan-3" value="pendidikan-biologi"
+                                    aria-label="Pilihan III Pendidikan Biologi"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Pendidikan Agama Katolik</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="pend-katolik-1" name="pilihan-1"
+                                    value="pendidikan-agama-katolik" aria-label="Pilihan I Pendidikan Agama Katolik">
+                            </td>
+                            <td><input type="radio" id="pend-katolik-2" name="pilihan-2"
+                                    value="pendidikan-agama-katolik" aria-label="Pilihan II Pendidikan Agama Katolik">
+                            </td>
+                            <td><input type="radio" id="pend-katolik-3" name="pilihan-3"
+                                    value="pendidikan-agama-katolik" aria-label="Pilihan III Pendidikan Agama Katolik">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="fakultas" rowspan="2">Ekonomi</td>
+                            <td class="prodi">Akuntansi</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="akuntansi-1" name="pilihan-1" value="akuntansi"
+                                    aria-label="Pilihan I Akuntansi"></td>
+                            <td><input type="radio" id="akuntansi-2" name="pilihan-2" value="akuntansi"
+                                    aria-label="Pilihan II Akuntansi"></td>
+                            <td><input type="radio" id="akuntansi-3" name="pilihan-3" value="akuntansi"
+                                    aria-label="Pilihan III Akuntansi"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Manajemen</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="manajemen-1" name="pilihan-1" value="manajemen"
+                                    aria-label="Pilihan I Manajemen"></td>
+                            <td><input type="radio" id="manajemen-2" name="pilihan-2" value="manajemen"
+                                    aria-label="Pilihan II Manajemen"></td>
+                            <td><input type="radio" id="manajemen-3" name="pilihan-3" value="manajemen"
+                                    aria-label="Pilihan III Manajemen"></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="fakultas" rowspan="3">Sastra</td>
+                            <td class="prodi">Sastra Indonesia</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="sastra-indonesia-1" name="pilihan-1" value="sastra-indonesia"
+                                    aria-label="Pilihan I Sastra Indonesia"></td>
+                            <td><input type="radio" id="sastra-indonesia-2" name="pilihan-2" value="sastra-indonesia"
+                                    aria-label="Pilihan II Sastra Indonesia"></td>
+                            <td><input type="radio" id="sastra-indonesia-3" name="pilihan-3" value="sastra-indonesia"
+                                    aria-label="Pilihan III Sastra Indonesia"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Sastra Inggris</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="sastra-inggris-1" name="pilihan-1" value="sastra-inggris"
+                                    aria-label="Pilihan I Sastra Inggris"></td>
+                            <td><input type="radio" id="sastra-inggris-2" name="pilihan-2" value="sastra-inggris"
+                                    aria-label="Pilihan II Sastra Inggris"></td>
+                            <td><input type="radio" id="sastra-inggris-3" name="pilihan-3" value="sastra-inggris"
+                                    aria-label="Pilihan III Sastra Inggris"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Ilmu Sejarah</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="ilmu-sejarah-1" name="pilihan-1" value="ilmu-sejarah"
+                                    aria-label="Pilihan I Ilmu Sejarah"></td>
+                            <td><input type="radio" id="ilmu-sejarah-2" name="pilihan-2" value="ilmu-sejarah"
+                                    aria-label="Pilihan II Ilmu Sejarah"></td>
+                            <td><input type="radio" id="ilmu-sejarah-3" name="pilihan-3" value="ilmu-sejarah"
+                                    aria-label="Pilihan III Ilmu Sejarah"></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="fakultas" rowspan="6">Sains dan Teknologi</td>
+                            <td class="prodi">Mekatronika</td>
+                            <td>D3</td>
+                            <td><input type="radio" id="mekatronika-1" name="pilihan-1" value="mekatronika"
+                                    aria-label="Pilihan I Mekatronika"></td>
+                            <td><input type="radio" id="mekatronika-2" name="pilihan-2" value="mekatronika"
+                                    aria-label="Pilihan II Mekatronika"></td>
+                            <td><input type="radio" id="mekatronika-3" name="pilihan-3" value="mekatronika"
+                                    aria-label="Pilihan III Mekatronika"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Teknik Elektro</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="elektro-1" name="pilihan-1" value="teknik-elektro"
+                                    aria-label="Pilihan I Teknik Elektro"></td>
+                            <td><input type="radio" id="elektro-2" name="pilihan-2" value="teknik-elektro"
+                                    aria-label="Pilihan II Teknik Elektro"></td>
+                            <td><input type="radio" id="elektro-3" name="pilihan-3" value="teknik-elektro"
+                                    aria-label="Pilihan III Teknik Elektro"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Teknik Mesin</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="mesin-1" name="pilihan-1" value="teknik-mesin"
+                                    aria-label="Pilihan I Teknik Mesin"></td>
+                            <td><input type="radio" id="mesin-2" name="pilihan-2" value="teknik-mesin"
+                                    aria-label="Pilihan II Teknik Mesin"></td>
+                            <td><input type="radio" id="mesin-3" name="pilihan-3" value="teknik-mesin"
+                                    aria-label="Pilihan III Teknik Mesin"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Teknik Informatika</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="informatika-1" name="pilihan-1" value="teknik-informatika"
+                                    aria-label="Pilihan I Teknik Informatika"></td>
+                            <td><input type="radio" id="informatika-2" name="pilihan-2" value="teknik-informatika"
+                                    aria-label="Pilihan II Teknik Informatika"></td>
+                            <td><input type="radio" id="informatika-3" name="pilihan-3" value="teknik-informatika"
+                                    aria-label="Pilihan III Teknik Informatika"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Matematika</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="matematika-1" name="pilihan-1" value="matematika"
+                                    aria-label="Pilihan I Matematika"></td>
+                            <td><input type="radio" id="matematika-2" name="pilihan-2" value="matematika"
+                                    aria-label="Pilihan II Matematika"></td>
+                            <td><input type="radio" id="matematika-3" name="pilihan-3" value="matematika"
+                                    aria-label="Pilihan III Matematika"></td>
+                        </tr>
+                        <tr>
+                            <td class="prodi">Fisika</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="fisika-1" name="pilihan-1" value="fisika"
+                                    aria-label="Pilihan I Fisika"></td>
+                            <td><input type="radio" id="fisika-2" name="pilihan-2" value="fisika"
+                                    aria-label="Pilihan II Fisika"></td>
+                            <td><input type="radio" id="fisika-3" name="pilihan-3" value="fisika"
+                                    aria-label="Pilihan III Fisika"></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="fakultas">Farmasi</td>
+                            <td class="prodi">Farmasi</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="farmasi-1" name="pilihan-1" value="farmasi"
+                                    aria-label="Pilihan I Farmasi"></td>
+                            <td><input type="radio" id="farmasi-2" name="pilihan-2" value="farmasi"
+                                    aria-label="Pilihan II Farmasi"></td>
+                            <td><input type="radio" id="farmasi-3" name="pilihan-3" value="farmasi"
+                                    aria-label="Pilihan III Farmasi"></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="fakultas">Psikologi</td>
+                            <td class="prodi">Psikologi</td>
+                            <td>S1</td>
+                            <td><input type="radio" id="psikologi-1" name="pilihan-1" value="psikologi"
+                                    aria-label="Pilihan I Psikologi"></td>
+                            <td><input type="radio" id="psikologi-2" name="pilihan-2" value="psikologi"
+                                    aria-label="Pilihan II Psikologi"></td>
+                            <td><input type="radio" id="psikologi-3" name="pilihan-3" value="psikologi"
+                                    aria-label="Pilihan III Psikologi"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="data-sma-smk-smf-MAN">
+                <h4>C. Data SMA/SMK/SMF/MAN</h4>
+
+                <table class="tabel-data">
+                    <tr>
+                        <td class="nomor">1.</td>
+                        <td class="label"><label for="nama-sekolah">Nama Sekolah Menengah</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="nama-sekolah" name="nama-sekolah"></td>
+                    </tr>
+                    <tr>
+                        <td class="nomor">2.</td>
+                        <td class="label"><label for="telepon-sekolah">Telepon</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="tel" id="telepon-sekolah" name="telepon-sekolah" inputmode="tel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nomor" rowspan="3">3.</td>
+                        <td class="label"><label for="alamat-sekolah">Alamat Sekolah</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="alamat-sekolah" name="alamat-sekolah"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="kabupaten-kota-sekolah">Kabupaten/Kota</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="kabupaten-kota-sekolah" name="kabupaten-kota-sekolah">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="provinsi-sekolah">Propinsi</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="text" id="provinsi-sekolah" name="provinsi-sekolah"></td>
+                    </tr>
+                    <tr>
+                        <td class="nomor" rowspan="2">4.</td>
+                        <td class="label" colspan="3">Bagi Yang Sudah Lulus/Memiliki Ijazah</td>
+                    </tr>
+                    <tr>
+                        <td class="label sub"><label for="sttb-tahun">STTB Tahun</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="number" id="sttb-tahun" name="sttb-tahun" min="1990" max="2100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nomor" rowspan="4">5.</td>
+                        <td class="label" colspan="3">Data NEM/STK/SKHUN</td>
+                    </tr>
+                    <tr>
+                        <td class="label sub"><label for="data-tahun">a. Tahun</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="number" id="data-tahun" name="data-tahun" min="1990" max="2100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label sub"><label for="jumlah-nilai">b. Jumlah Nilai</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="number" id="jumlah-nilai" name="jumlah-nilai" min="0" step="0.01">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label sub"><label for="jumlah-mata-pelajaran">c. Jumlah Mata Pelajaran</label></td>
+                        <td class="titik-dua">:</td>
+                        <td class="isi"><input type="number" id="jumlah-mata-pelajaran" name="jumlah-mata-pelajaran"
+                                min="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="nomor">6.</td>
+                        <td class="label" colspan="3">Jurusan:</td>
+                    </tr>
+                </table>
+
+                <div class="wadah-jurusan">
+                    <table class="tabel-jurusan">
+                        <thead>
+                            <tr>
+                                <th>Jurusan</th>
+                                <th>Negeri</th>
+                                <th>Swasta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="jurusan">SMA IPA</td>
+                                <td><input type="radio" id="jurusan-ipa-negeri" name="jurusan" value="sma-ipa-negeri"
+                                        aria-label="SMA IPA Negeri"></td>
+                                <td><input type="radio" id="jurusan-ipa-swasta" name="jurusan" value="sma-ipa-swasta"
+                                        aria-label="SMA IPA Swasta"></td>
+                            </tr>
+                            <tr>
+                                <td class="jurusan">SMA IPS</td>
+                                <td><input type="radio" id="jurusan-ips-negeri" name="jurusan" value="sma-ips-negeri"
+                                        aria-label="SMA IPS Negeri"></td>
+                                <td><input type="radio" id="jurusan-ips-swasta" name="jurusan" value="sma-ips-swasta"
+                                        aria-label="SMA IPS Swasta"></td>
+                            </tr>
+                            <tr>
+                                <td class="jurusan">SMA Bahasa</td>
+                                <td><input type="radio" id="jurusan-bahasa-negeri" name="jurusan"
+                                        value="sma-bahasa-negeri" aria-label="SMA Bahasa Negeri"></td>
+                                <td><input type="radio" id="jurusan-bahasa-swasta" name="jurusan"
+                                        value="sma-bahasa-swasta" aria-label="SMA Bahasa Swasta"></td>
+                            </tr>
+                            <tr>
+                                <td class="jurusan">SMK Ekonomi</td>
+                                <td><input type="radio" id="jurusan-ekonomi-negeri" name="jurusan"
+                                        value="smk-ekonomi-negeri" aria-label="SMK Ekonomi Negeri"></td>
+                                <td><input type="radio" id="jurusan-ekonomi-swasta" name="jurusan"
+                                        value="smk-ekonomi-swasta" aria-label="SMK Ekonomi Swasta"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="tabel-jurusan">
+                        <thead>
+                            <tr>
+                                <th>Jurusan</th>
+                                <th>Negeri</th>
+                                <th>Swasta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="jurusan">SMK Teknik</td>
+                                <td><input type="radio" id="jurusan-teknik-negeri" name="jurusan"
+                                        value="smk-teknik-negeri" aria-label="SMK Teknik Negeri"></td>
+                                <td><input type="radio" id="jurusan-teknik-swasta" name="jurusan"
+                                        value="smk-teknik-swasta" aria-label="SMK Teknik Swasta"></td>
+                            </tr>
+                            <tr>
+                                <td class="jurusan">SMK Ketrampilan</td>
+                                <td><input type="radio" id="jurusan-keterampilan-negeri" name="jurusan"
+                                        value="smk-ketrampilan-negeri" aria-label="SMK Ketrampilan Negeri"></td>
+                                <td><input type="radio" id="jurusan-keterampilan-swasta" name="jurusan"
+                                        value="smk-ketrampilan-swasta" aria-label="SMK Ketrampilan Swasta"></td>
+                            </tr>
+                            <tr>
+                                <td class="jurusan">SMF</td>
+                                <td><input type="radio" id="jurusan-smf-negeri" name="jurusan" value="smf-negeri"
+                                        aria-label="SMF Negeri"></td>
+                                <td><input type="radio" id="jurusan-smf-swasta" name="jurusan" value="smf-swasta"
+                                        aria-label="SMF Swasta"></td>
+                            </tr>
+                            <tr>
+                                <td class="jurusan">Lain-lain</td>
+                                <td><input type="radio" id="jurusan-lain-negeri" name="jurusan" value="lain-negeri"
+                                        aria-label="Lain-lain Negeri"></td>
+                                <td><input type="radio" id="jurusan-lain-swasta" name="jurusan" value="lain-swasta"
+                                        aria-label="Lain-lain Swasta"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="tabel-permohonan-keringanan-dpp">
+                <h4>D. Permohonan Keringanan DPP</h4>
+
+                <div class="baris-centang">
+                    <input type="checkbox" id="pengajuan-dpp" name="pengajuan-dpp">
+                    <label for="pengajuan-dpp">Saya mengajukan permohonan keringanan DPP (Dana Pengembangan Pendidikan).
+                        Kelengkapan Dokumen yang saya sertakan:</label>
+                </div>
+
+                <div class="dokumen-dpp">
+                    <div class="baris-dokumen">
+                        <label for="gaji-orgtua">a. Daftar Gaji Ayah dan Ibu atau Surat Keterangan Penghasilan Ayah dan
+                            Ibu yang disahkan Ketua RT</label>
+                        <input type="checkbox" id="gaji-orgtua" name="gaji-orgtua" disabled>
+                    </div>
+                    <div class="baris-dokumen">
+                        <label for="bukti-rekening">b. Bukti Rekening Listrik dan Telepon</label>
+                        <input type="checkbox" id="bukti-rekening" name="bukti-rekening" disabled>
+                    </div>
+                    <div class="baris-dokumen">
+                        <label for="surat-keterangan-tidak-mampu">c. Surat Keterangan Tidak Mampu dari Ketua RT</label>
+                        <input type="checkbox" id="surat-keterangan-tidak-mampu" name="surat-keterangan-tidak-mampu"
+                            disabled>
+                    </div>
+                </div>
+
+                <div class="baris-centang">
+                    <input type="checkbox" id="surat-tidak-mengajukan" name="surat-tidak-mengajukan">
+                    <label for="surat-tidak-mengajukan">Saya tidak mengajukan permohonan keringanan DPP</label>
+                </div>
+            </section>
+
+            <section class="partisipasi-program-beasiswa">
+                <h4>E. Partisipasi Program Beasiswa Universitas Sanata Dharma</h4>
+
+                <div class="baris-centang">
+                    <input type="checkbox" id="menyumbang" name="menyumbang">
+                    <label for="menyumbang">Saya akan menyumbang dana ke USD untuk beasiswa sebesar Rp</label>
+                    <input type="number" id="jumlah-sumbangan" name="jumlah-sumbangan" class="sedang" min="0"
+                        aria-label="Jumlah sumbangan dalam rupiah" disabled>
+                </div>
+                <div class="baris-centang">
+                    <input type="checkbox" id="tidak-menyumbang" name="tidak-menyumbang">
+                    <label for="tidak-menyumbang">Saya tidak akan menyumbang dana ke USD untuk beasiswa</label>
+                </div>
+
+                <p class="pernyataan"><b><i>Pernyataan:</i></b></p>
+                <p class="pernyataan"><b><i>Saya menyatakan dengan sesungguhnya bahwa data yang saya isikan dalam
+                            formulir ini adalah benar.</i></b></p>
+
+                <div class="tanda-tangan">
+                    <div class="garis-ttd"></div>
+                    <p>Calon Mahasiswa</p>
+                    <div class="nama-ttd">
+                        <span>(</span>
+                        <input type="text" id="nama-tanda-tangan" name="nama-tanda-tangan" aria-label="Nama calon mahasiswa">
+                        <span>)</span>
+                    </div>
+                </div>
+            </section>
+
+            <p id="pesan" class="pesan" role="alert" hidden></p>
+
+            <div class="tombol-aksi">
+                <button type="submit">Kirim Formulir</button>
+                <button type="reset">Kosongkan</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="formulir.js"></script>
+</body>
+
+</html>
