@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator sederhana</title>
+    <link rel="Stylesheet" href="kalkulator-style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-output">0</div>
+        <div class="calculator-keys">
+            <button class="operator">+</button>
+            <button class="operator">-</button>
+            <button class="operator">&times;</button>
+            <button class="operator">/</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="decimal">.</button>
+            <button class="clear">C</button>
+            <button class="enter">=</button>
+        </div>
+    </div>
+
+    <script>
+        const output = document.querySelector('.calculator-output');
+        const keys = document.querySelector('.calculator-keys');
+        let displayValue = '0';
+        let firstOperand = null;
+        let waitingForSecondOperand = false;
+        let operator = null;
+
+        function updateDisplay() {
+            output.textContent = displayValue;
+        }
+
+        function inputDigit(digit) {
+            if (waitingForSecondOperand === true) {
+                displayValue = digit;
+                waitingForSecondOperand = false;
+            } else {
+                displayValue = displayValue === '0' ? digit : displayValue + digit;
+            }
+        }
+
+        function inputDecimal(dot) {
+            if (waitingForSecondOperand === true) {
+                displayValue = '0';
+                waitingForSecondOperand = false;
+                return;
+            }
+            if (!displayValue.includes(dot)) {
+                displayValue += dot;
+            }
+        }
+
+        function handleOperator(nextOperator) {
+            const inputValue = parseFloat(displayValue);
+
+            if (operator && waitingForSecondOperand)  {
+                operator = nextOperator;
+                return;
+            }
+
+            if (firstOperand === null && !isNaN(inputValue)) {
+                firstOperand = inputValue;
+            } else if (operator) {
+                const result = calculate(firstOperand, inputValue, operator);
+                displayValue = `${parseFloat(result.toFixed(7))}`;
+                firstOperand = result;
+            }
+
+            waitingForSecondOperand = true;
+            operator = nextOperator;
+        }
+
+        function calculate(first, second, op) {
+            if (op === '+') return first + second;
+            if (op === '-') return first - second;
+            if (op === '×') return first * second;
+            if (op === '/') return first / second;
+            return second;
+        }
+
+        function resetCalculator() {
+            displayValue = '0';
+            firstOperand = null;
+            waitingForSecondOperand = false;
+            operator = null;
+        }
+
+        keys.addEventListener('click', (event) => {
+            const { target } = event;
+            if (!target.matches('button')) return;
+
+            if (target.classList.contains('operator')) {
+                handleOperator(target.textContent);
+                updateDisplay();
+                return;
+            }
+
+            if (target.classList.contains('decimal')) {
+                inputDecimal(target.textContent);
+                updateDisplay();
+                return;
+            }
+
+            if (target.classList.contains('clear')) {
+                resetCalculator();
+                updateDisplay();
+                return;
+            }
+
+            if (target.classList.contains('enter')) {
+                handleOperator(operator);
+                operator = null;
+                waitingForSecondOperand = false;
+                updateDisplay();
+                return;
+            }
+
+            inputDigit(target.textContent);
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>
